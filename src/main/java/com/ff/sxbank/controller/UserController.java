@@ -67,10 +67,7 @@ public class UserController {
             user.setUsername(username);
             String userRegisterPassword = registerUser.get("password");
             // 对用户密码加密后进行存储
-            String pass = SM4Utils.encryptData_CBC(userRegisterPassword);
-            log.info("用户注册密码---------------------：{}",registerUser.get("password"));
-            log.info("二次加密后的用户注册密码{}",pass);
-            user.setPassword(pass);
+            user.setPassword(userRegisterPassword);
             user.setPhoneNumber(registerUser.get("phoneNumber"));
             user.setIdentityNumber(registerUser.get("identityNumber"));
             user.setAccountNumber(registerUser.get("cardNumber"));

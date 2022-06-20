@@ -70,11 +70,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         try {
             QueryWrapper wrapper = new QueryWrapper();
             wrapper.eq("username", user.getUsername());
-            String pass = SM4Utils.encryptData_CBC(user.getPassword());
-            log.info("登录密码---------------------------：{}",user.getPassword());
-            log.info("数据库密码：{}",pass);
+            String pass = user.getPassword();
             wrapper.eq("password", pass);
-            //wrapper.eq("identity_number", user.getIdentityNumber());
             User userDB = userMapper.selectOne(wrapper);
             log.info("user from db :{}",userDB);
             if (userDB == null) {
