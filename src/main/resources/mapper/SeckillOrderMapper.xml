@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ff.sxbank.mapper.SeckillOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ff.sxbank.pojo.SeckillOrder">
+        <id column="order_id" property="orderId" />
+        <result column="user_identity" property="userIdentity" />
+        <result column="username" property="username" />
+        <result column="product_id" property="productId" />
+        <result column="product_name" property="productName" />
+        <result column="purchase_amount" property="purchaseAmount" />
+        <result column="order_price" property="orderPrice" />
+        <result column="order_time" property="orderTime" />
+        <result column="deleted" property="deleted" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        order_id, user_identity, username, product_id, product_name, purchase_amount, order_price, order_time, deleted
+    </sql>
+
+</mapper>

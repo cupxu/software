@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ff.sxbank.mapper.AdminMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ff.sxbank.pojo.Admin">
+        <id column="id" property="id" />
+        <result column="admin_name" property="adminName" />
+        <result column="phone_number" property="phoneNumber" />
+        <result column="identity_number" property="identityNumber" />
+        <result column="account_number" property="accountNumber" />
+        <result column="company_money" property="companyMoney" />
+        <result column="password" property="password" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, admin_name, phone_number, identity_number, account_number, company_money, password
+    </sql>
+
+</mapper>

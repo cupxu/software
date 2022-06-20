@@ -1,0 +1,6 @@
+{
+  "code": "-1",
+  "msg": "nested exception is org.apache.ibatis.exceptions.PersistenceException: \r\n### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Access denied for user 'root'@'36.154.118.7' (using password: YES)\r\n### The error may exist in com/ff/sxbank/mapper/UserMapper.java (best guess)\r\n### The error may involve com.ff.sxbank.mapper.UserMapper.selectList\r\n### The error occurred while executing a query\r\n### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: Access denied for user 'root'@'36.154.118.7' (using password: YES)",
+  "result": null,
+  "date": "2022-06-20 15:31:15 PM"
+}

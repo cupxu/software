@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ff.sxbank.mapper.OverdueRecordMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ff.sxbank.pojo.OverdueRecord">
+        <id column="user_id" property="userId" />
+        <result column="username" property="username" />
+        <result column="identity_number" property="identityNumber" />
+        <result column="overdue_times" property="overdueTimes" />
+        <result column="is_store" property="isStore" />
+        <result column="overdue_days" property="overdueDays" />
+        <result column="working_state" property="workingState" />
+        <result column="is_borrow" property="isBorrow" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        user_id, username, identity_number, overdue_times, is_store, overdue_days, working_state, is_borrow
+    </sql>
+
+
+</mapper>

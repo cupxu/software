@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ff.sxbank.mapper.SeckillProductMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ff.sxbank.pojo.SeckillProduct">
+        <id column="seckill_product_id" property="seckillProductId" />
+        <result column="seckill_product_name" property="seckillProductName" />
+        <result column="seckill_product_amount" property="seckillProductAmount" />
+        <result column="seckill_product_price" property="seckillProductPrice" />
+        <result column="delete" property="deleted" />
+        <result column="seckill_time" property="seckillTime" />
+        <result column="seckill_end" property="seckillEnd" />
+        <result column="version" property="version" />
+
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        seckill_product_id, seckill_product_name, seckill_product_amount, seckill_product_price, deleted, seckill_time, seckill_end, version</sql>
+
+</mapper>

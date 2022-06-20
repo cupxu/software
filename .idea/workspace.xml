@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0769dcca-e807-4c1b-9094-91e9af82ade0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="25ij08q1gIT2qcmoxEj9ofRijHo" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.37587008" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="A:\sxbank\src\main\resources" />
+      <recent name="A:\sxbank\src\main\java\com\ff\sxbank\sm4" />
+      <recent name="A:\sxbank\src\main\java\com\ff\sxbank" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="A:\sxbank\src\main\resources" />
+      <recent name="A:\sxbank\src\test\java\com\ff\sxbank" />
+      <recent name="A:\sxbank\src\main\java\com\ff\sxbank\service\impl" />
+      <recent name="A:\sxbank\src\main\java\com\ff\sxbank\service" />
+      <recent name="A:\sxbank\src\main\java\com\ff\sxbank\controller" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.ff.sxbank" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ff.sxbank.util" />
+      <recent name="com.ff.sxbank.interceptor" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SxbankApplication">
+    <configuration name="generated-requests | #41" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="41" requestIdentifier="#41" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #42" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="42" requestIdentifier="#42" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #43" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="43" requestIdentifier="#43" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #44" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="44" requestIdentifier="#44" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #45" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="45" requestIdentifier="#45" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="SxbankApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sxbank" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ff.sxbank.SxbankApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.SxbankApplication" />
+      <item itemvalue="HTTP Request.generated-requests | #41" />
+      <item itemvalue="HTTP Request.generated-requests | #42" />
+      <item itemvalue="HTTP Request.generated-requests | #43" />
+      <item itemvalue="HTTP Request.generated-requests | #44" />
+      <item itemvalue="HTTP Request.generated-requests | #45" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.generated-requests | #45" />
+        <item itemvalue="HTTP Request.generated-requests | #44" />
+        <item itemvalue="HTTP Request.generated-requests | #43" />
+        <item itemvalue="HTTP Request.generated-requests | #42" />
+        <item itemvalue="HTTP Request.generated-requests | #41" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0769dcca-e807-4c1b-9094-91e9af82ade0" name="Default Changelist" comment="" />
+      <created>1646016575257</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646016575257</updated>
+      <workItem from="1646016576798" duration="6235000" />
+      <workItem from="1646033740366" duration="13652000" />
+      <workItem from="1646050569271" duration="4070000" />
+      <workItem from="1646095164274" duration="12800000" />
+      <workItem from="1646114717672" duration="14845000" />
+      <workItem from="1646373104985" duration="14335000" />
+      <workItem from="1646387772329" duration="124000" />
+      <workItem from="1646814272380" duration="4379000" />
+      <workItem from="1646818992726" duration="207000" />
+      <workItem from="1646826736867" duration="880000" />
+      <workItem from="1646827645016" duration="1417000" />
+      <workItem from="1646829170447" duration="4222000" />
+      <workItem from="1646894000711" duration="18599000" />
+      <workItem from="1647333425945" duration="2896000" />
+      <workItem from="1647341838002" duration="6591000" />
+      <workItem from="1647402020408" duration="3145000" />
+      <workItem from="1647419125055" duration="6998000" />
+      <workItem from="1647498756612" duration="15048000" />
+      <workItem from="1647520487794" duration="1921000" />
+      <workItem from="1647576532037" duration="84000" />
+      <workItem from="1647660422167" duration="1575000" />
+      <workItem from="1647742870806" duration="3189000" />
+      <workItem from="1647746496965" duration="4030000" />
+      <workItem from="1647761094804" duration="7840000" />
+      <workItem from="1647777224865" duration="4059000" />
+      <workItem from="1647822772898" duration="11702000" />
+      <workItem from="1647835183949" duration="96000" />
+      <workItem from="1647846673277" duration="3119000" />
+      <workItem from="1647852490853" duration="1404000" />
+      <workItem from="1647863035067" duration="3372000" />
+      <workItem from="1648207941512" duration="3340000" />
+      <workItem from="1648213670784" duration="37000" />
+      <workItem from="1648258063171" duration="3482000" />
+      <workItem from="1648274491080" duration="841000" />
+      <workItem from="1648695897032" duration="5678000" />
+      <workItem from="1648724181070" duration="126000" />
+      <workItem from="1648802305258" duration="2974000" />
+      <workItem from="1648808151036" duration="8688000" />
+      <workItem from="1648948113408" duration="14144000" />
+      <workItem from="1648970784162" duration="10904000" />
+      <workItem from="1649120635953" duration="8047000" />
+      <workItem from="1649128782256" duration="479000" />
+      <workItem from="1649155998978" duration="6846000" />
+      <workItem from="1649320601282" duration="967000" />
+      <workItem from="1649323181026" duration="1459000" />
+      <workItem from="1649327856402" duration="3421000" />
+      <workItem from="1649331975012" duration="5463000" />
+      <workItem from="1649403998630" duration="48000" />
+      <workItem from="1649404074510" duration="311000" />
+      <workItem from="1649404420566" duration="29000" />
+      <workItem from="1649404473300" duration="392000" />
+      <workItem from="1649405148110" duration="1704000" />
+      <workItem from="1649407003760" duration="415000" />
+      <workItem from="1649423462562" duration="498000" />
+      <workItem from="1649424244796" duration="98000" />
+      <workItem from="1649491579445" duration="3743000" />
+      <workItem from="1649553731087" duration="5598000" />
+      <workItem from="1649562712106" duration="2731000" />
+      <workItem from="1649575038481" duration="3213000" />
+      <workItem from="1649580973779" duration="5838000" />
+      <workItem from="1649593325899" duration="3210000" />
+      <workItem from="1649637637263" duration="4179000" />
+      <workItem from="1649642359801" duration="5749000" />
+      <workItem from="1649657454246" duration="12605000" />
+      <workItem from="1649722208879" duration="6635000" />
+      <workItem from="1649730428070" duration="8057000" />
+      <workItem from="1649739672401" duration="4706000" />
+      <workItem from="1649744633178" duration="429000" />
+      <workItem from="1649746050200" duration="7513000" />
+      <workItem from="1649755368644" duration="2098000" />
+      <workItem from="1649757945115" duration="496000" />
+      <workItem from="1649761702255" duration="1458000" />
+      <workItem from="1649766833525" duration="1637000" />
+      <workItem from="1649773184546" duration="1263000" />
+      <workItem from="1649775960444" duration="82000" />
+      <workItem from="1649818955207" duration="4266000" />
+      <workItem from="1649831993951" duration="257000" />
+      <workItem from="1649840214333" duration="79000" />
+      <workItem from="1649908235444" duration="479000" />
+      <workItem from="1649909505061" duration="1007000" />
+      <workItem from="1649926695872" duration="432000" />
+      <workItem from="1649927611346" duration="10642000" />
+      <workItem from="1649946998107" duration="3427000" />
+      <workItem from="1649992731574" duration="690000" />
+      <workItem from="1649996926572" duration="786000" />
+      <workItem from="1650002694917" duration="2455000" />
+      <workItem from="1650006374059" duration="543000" />
+      <workItem from="1650028356240" duration="798000" />
+      <workItem from="1650098663800" duration="193000" />
+      <workItem from="1650099498356" duration="1603000" />
+      <workItem from="1650119368372" duration="57000" />
+      <workItem from="1650122043654" duration="357000" />
+      <workItem from="1655709600818" duration="616000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/lang/Exception.java</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/sxbank$SxbankApplication.ic" NAME="SxbankApplication Coverage Results" MODIFIED="1646831194413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

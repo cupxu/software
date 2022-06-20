@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: qq
+
+  file:
+    path: /var/log/logs
+  level:
+    com.ff: debug

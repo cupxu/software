@@ -1,0 +1,77 @@
+spring:
+  # 数据源配置
+  datasource:
+    # mysql8.0驱动要带cj 5.0不带cj
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://110.42.190.185:3306/sxbank?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=Asia/Shanghai
+    username: admin
+    password: xlf@root-8888
+    # 号称最快的连接池 默认
+    hikari:
+      # 连接池名
+      pool-name: DateHikariCP
+      # 最小空闲连接数
+      minimum-idle: 5
+      # 空闲连接最大存活时间 默认10分钟 600000 ms
+      idle-timeout: 1800000
+      # 最大连接数 默认10
+      maximum-pool-size: 10
+      # 从连接池返回的连接自动提交
+      auto-commit: true
+      # 连接最大存活时间，0表示永久存活 默认30分钟 1800000ms
+      max-lifetime: 1800000
+      # 连接超时时间，默认30秒 30000ms
+      connection-timeout: 30000
+      # 心跳机制 测试连接是否可用的查询语句
+      connection-test-query: SELECT 1
+  http:
+    encoding: utf-8
+  # redis集群
+  redis:
+    host: 110.42.190.185
+    port: 6379
+    password: qePdzBvKMEXJvJwf5k7wQFPK1nUmapD4
+    # 默认操作的数据库
+    database: 0
+    # 超时时间
+    timeout: 20000
+    #    集群环境打开下面注释，单机不需要打开
+    #    cluster:
+    #      集群信息
+    #      nodes: xxx.xxx.xxx.xxx:xxxx,xxx.xxx.xxx.xxx:xxxx,xxx.xxx.xxx.xxx:xxxx
+    #      #默认值是5 一般当此值设置过大时，容易报：Too many Cluster redirections
+    #      maxRedirects: 3
+    lettuce:
+      pool:
+        # 最大链接数
+        max-active: 30
+        # 最大空闲连接数
+        max-idle: 30
+        # 最小空闲连接数
+        min-idle: 0
+        # 最大链接阻塞等待时间 默认-1
+        max-wait: 10000ms
+
+# mybatis-plus 配置
+mybatis-plus:
+  # 配置Mapper.xml 映射文件 单独把Mapper.xml 放在resource目录下的mapper目录
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  # 配置Mybatis 数据返回类型别名(默认别名是类名)
+  type-aliases-package: com.ff.sxbank.pojo
+    # 配置日志输出sql语句
+    #configuration:
+  #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: flag # 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+
+server:
+  port: 8080
+
+  # 指定某个包或类的日志级别 用于debug
+  level:
+    com.ff: debug
+
+

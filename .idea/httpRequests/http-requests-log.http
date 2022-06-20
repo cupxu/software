@@ -1,0 +1,30 @@
+GET http://localhost:8080/user/allUsers
+
+<> 2022-06-20T153308.200.json
+
+###
+
+GET http://localhost:8080/user/allUsers
+
+<> 2022-06-20T153115.200.json
+
+###
+
+GET http://localhost:8080/user/test
+
+<> 2022-06-20T153102.200.json
+
+###
+
+GET http://localhost:8080/test/get
+
+<> 2022-06-20T153046.200.json
+
+###
+
+GET http://localhost:8081/user/allUsers
+
+<> 2022-06-20T152835.200.json
+
+###
+

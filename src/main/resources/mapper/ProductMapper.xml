@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ff.sxbank.mapper.ProductMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ff.sxbank.pojo.Product">
+        <id column="product_id" property="productId" />
+        <result column="seckill_product_name" property="seckillProductName" />
+        <result column="product_scale" property="productScale" />
+        <result column="seckill_time" property="seckillTime" />
+        <result column="seckill_end" property="seckillEnd" />
+        <result column="product_rate" property="productRate" />
+        <result column="product_period" property="productPeriod" />
+        <result column="product_release_start_day" property="productReleaseStartDay" />
+        <result column="product_release_end_day" property="productReleaseEndDay" />
+        <result column="product_harvest_day" property="productHarvestDay" />
+        <result column="product_expire_day" property="productExpireDay" />
+        <result column="product_code" property="productCode" />
+        <result column="product_addition" property="productAddition" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        product_id, seckill_product_name,product_scale, seckill_time, seckill_end, product_rate, product_period, product_release_start_day, product_release_end_day, product_harvest_day, product_expire_day, product_code, product_addition
+    </sql>
+
+</mapper>
