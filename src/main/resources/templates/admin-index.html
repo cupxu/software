@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+
+<body>
+<ul>
+    <li th:each="tag:${allUsers.getResult()}"
+        th:text="${tag.username}"></li>
+</ul>
+
+</body>
+
+</html>

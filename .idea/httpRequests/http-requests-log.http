@@ -1,5 +1,27 @@
 GET http://localhost:8080/user/allUsers
 
+<> 2022-06-21T103838.200.html
+
+###
+
+GET http://localhost:8080/user/allUsers
+
+<> 2022-06-21T095639.500.json
+
+###
+
+GET http://localhost:8080/user/allUsers
+
+<> 2022-06-21T092531.200.json
+
+###
+
+GET http://localhost:8080/user/allUsers
+
+###
+
+GET http://localhost:8080/user/allUsers
+
 <> 2022-06-20T153308.200.json
 
 ###

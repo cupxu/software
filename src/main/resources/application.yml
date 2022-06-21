@@ -1,7 +1,13 @@
 spring:
   profiles:
     active: qq
-
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    content-type: text/html
+    mode: HTML5
   file:
     path: /var/log/logs
   level:

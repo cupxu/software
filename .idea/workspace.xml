@@ -18,6 +18,7 @@
         <option value="HTML File" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="thymeleaf" />
       </list>
     </option>
   </component>
@@ -31,6 +32,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -51,6 +55,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -58,7 +63,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.37587008" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -85,12 +90,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SxbankApplication">
-    <configuration name="generated-requests | #41" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="41" requestIdentifier="#41" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests | #42" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="42" requestIdentifier="#42" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration name="generated-requests | #43" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="43" requestIdentifier="#43" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -98,6 +97,12 @@
       <method v="2" />
     </configuration>
     <configuration name="generated-requests | #45" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="45" requestIdentifier="#45" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #46" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="46" requestIdentifier="#46" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #49" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="49" requestIdentifier="#49" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="SxbankApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -110,20 +115,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="HTTP Request.generated-requests | #41" />
-      <item itemvalue="HTTP Request.generated-requests | #42" />
       <item itemvalue="HTTP Request.generated-requests | #43" />
       <item itemvalue="HTTP Request.generated-requests | #44" />
       <item itemvalue="HTTP Request.generated-requests | #45" />
+      <item itemvalue="HTTP Request.generated-requests | #46" />
+      <item itemvalue="HTTP Request.generated-requests | #49" />
       <item itemvalue="Spring Boot.SxbankApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #49" />
+        <item itemvalue="HTTP Request.generated-requests | #46" />
         <item itemvalue="HTTP Request.generated-requests | #45" />
         <item itemvalue="HTTP Request.generated-requests | #44" />
         <item itemvalue="HTTP Request.generated-requests | #43" />
-        <item itemvalue="HTTP Request.generated-requests | #42" />
-        <item itemvalue="HTTP Request.generated-requests | #41" />
       </list>
     </recent_temporary>
   </component>
@@ -133,7 +138,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d3014cdb-15f7-40f2-8d9c-aaf1dd8f9d56" name="Changes" comment="" />
+      <changelist id="e3f18db5-2d23-454e-a07a-ae5d53063a18" name="Changes" comment="" />
       <created>1646016575257</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -231,8 +236,34 @@
       <workItem from="1650119368372" duration="57000" />
       <workItem from="1650122043654" duration="357000" />
       <workItem from="1655709600818" duration="1001000" />
-      <workItem from="1655710718652" duration="330000" />
+      <workItem from="1655710718652" duration="970000" />
+      <workItem from="1655716000853" duration="1368000" />
+      <workItem from="1655774114163" duration="1461000" />
+      <workItem from="1655775792036" duration="2053000" />
+      <workItem from="1655778357487" duration="506000" />
     </task>
+    <task id="LOCAL-00001" summary="取消用户登录密码加密">
+      <created>1655711556220</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655711556220</updated>
+    </task>
+    <task id="LOCAL-00002" summary="测试前后端交互 查询所有用户姓名&#10;接口 ip:8080/user/allUsers">
+      <created>1655778622208</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655778622209</updated>
+    </task>
+    <task id="LOCAL-00003" summary="测试前后端交互 查询所有用户姓名&#10;接口 ip:8080/user/allUsers">
+      <created>1655778801683</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655778801683</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +279,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="取消用户登录密码加密" />
+    <MESSAGE value="测试前后端交互 查询所有用户姓名&#10;接口 ip:8080/user/allUsers" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试前后端交互 查询所有用户姓名&#10;接口 ip:8080/user/allUsers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,0 +1,39 @@
+{
+  "code": "200",
+  "msg": "成功!",
+  "result": [
+    {
+      "userId": 1,
+      "username": "user",
+      "password": "123",
+      "phoneNumber": "15389762847",
+      "identityNumber": "123456",
+      "registerTime": null,
+      "lastLoginTime": null,
+      "version": 1,
+      "deleted": 0,
+      "money": 10000,
+      "product": null,
+      "accountNumber": "463785986389765934",
+      "success": 0,
+      "productName": null
+    },
+    {
+      "userId": 2,
+      "username": "test_user",
+      "password": "hbMK6/IeJ3UTzaTgLb3f3A==",
+      "phoneNumber": null,
+      "identityNumber": "1234567890123",
+      "registerTime": 1649819164000,
+      "lastLoginTime": 1649819164000,
+      "version": 1,
+      "deleted": 0,
+      "money": 5934,
+      "product": null,
+      "accountNumber": null,
+      "success": 0,
+      "productName": null
+    }
+  ],
+  "date": "2022-06-21 09:25:31 AM"
+}

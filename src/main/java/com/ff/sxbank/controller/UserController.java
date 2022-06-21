@@ -27,7 +27,7 @@ import java.util.Random;
  * @since 2022-02-28
  */
 @Slf4j
-@RestController
+@Controller
 @RequestMapping("/user")
 public class UserController {
 
@@ -157,11 +157,13 @@ public class UserController {
     }
 
     @GetMapping("/allUsers")
-    public ResponseResult get() {
-        return userService.selectAll();
+    public String get(Model model) {
+        model.addAttribute("allUsers",userService.selectAll());
+        return "admin-index";
     }
 
     @GetMapping("/test")
+    @ResponseBody
     public ResponseResult test() {
         log.info("测试");
         return ResponseResult.success("测试成功");
