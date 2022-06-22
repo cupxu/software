@@ -1,31 +1,120 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
-    <title>Title</title>
+    <title>第一个 ECharts 实例</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 </head>
 
 <body>
-<!-- 为 ECharts 准备一个定义了宽高的 DOM -->
-<div id="main" style="width: 600px;height:400px;"></div>
-<ul>
-    <li th:each="tag:${allUsers.getResult()}"
-        th:text="${tag.username}"></li>
-</ul>
-<div>
-    <h2 th:text="${allUsers.getResult()}"></h2>
-    <p>
-        datas[0]
-    </p>
-</div>
-<script>
-    //从后端获取json字符串
-    var  obj=[[${allUsers.getResult()}]]
-    //将json字符串转为数组
-    var datas = JSON.parse(obj);
-</script>
-</body>
+    <div class="main">
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <div class="container-fluid">
+                <h3 class="page-title">数据可视化测试</h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">公司产品与用户概况</h3>
+                            </div>
 
+                            <div class="panel-body">
+                                <!--<div id="demo-line-chart" class="ct-chart"></div>-->
+                                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                                <!--产品金额散点图-->
+                                <div class="col-md-6" id="productPrice" style="width: 500px;height:300px;">
+                                    <script type="text/javascript" th:inline="javascript">
+
+                                        //从后端获取json字符串
+                                        var obj1 = [[${productList}]]
+                                        var product = []
+                                        var price = []
+
+                                        //在js读取thymeleaf变量值
+                                        for(var i = 0 ; i < obj1.length ; i++)
+                                        {
+                                            product[i] = obj1[i].seckillProductName;
+                                            price[i] = obj1[i].seckillProductPrice;
+                                        }
+
+                                        var myChart = echarts.init(document.getElementById('productPrice'));
+
+                                        // 显示标题，图例和空的坐标轴
+                                        myChart.setOption({
+                                            title: {
+                                                text: '产品金额分布图'
+                                            },
+                                            tooltip: {},
+                                            legend: {
+                                                data: ['金额']
+                                            },
+                                            xAxis: {
+                                                data: product
+                                            },
+                                            yAxis: {},
+                                            series: [
+                                                {
+                                                    name: '金额',
+                                                    type: 'scatter',
+                                                    data: price
+                                                }
+                                            ]
+                                        });
+
+
+                                    </script>
+
+                                </div>
+
+                            <!--用户年龄饼图-->
+                            <div class="col-md-6" id="userAge" style="width: 500px;height:300px;">
+                                <script type="text/javascript" th:inline="javascript">
+                                    //在js读取thymeleaf变量值
+                                    var obj=[[${userAge}]]
+                                    var age1 = obj[0];
+                                    var age2 = obj[1];
+                                    var age3 = obj[2];
+                                    var age4 = obj[3];
+                                    var age5 = obj[4];
+                                    var myChart = echarts.init(document.getElementById('userAge'));
+
+                                            // 显示标题，图例和空的坐标轴
+                                            myChart.setOption({
+                                                tooltip: {},
+                                                title: {
+                                                    text: '年龄分布',
+                                                    left: 'center'
+                                                },
+                                                series: [
+                                                {
+                                                    name: '年龄',
+                                                    type: 'pie',
+                                                    data: [
+                                                    {value: age1,name: '18-30岁'},
+                                                    {value: age2,name: '31-40岁'},
+                                                    {value: age3,name: '41-50岁'},
+                                                    {value: age4,name: '51-60岁'},
+                                                    {value: age5,name: '61-70岁'}
+                                                    ]
+                                                }
+                                                ]
+                                            });
+                                </script>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+        <!-- END MAIN CONTENT -->
+    </div>
+
+
+</body>
 </html>

@@ -4,6 +4,7 @@ import com.ff.sxbank.exception.ResponseResult;
 import com.ff.sxbank.mapper.OverdueRecordMapper;
 import com.ff.sxbank.pojo.OverdueRecord;
 import com.ff.sxbank.pojo.User;
+import com.ff.sxbank.service.impl.SeckillProductServiceImpl;
 import com.ff.sxbank.service.impl.UserServiceImpl;
 import com.ff.sxbank.sm4.SM4Utils;
 import com.ff.sxbank.util.CalculateAge;
@@ -36,6 +37,12 @@ public class UserController {
     @Autowired
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public SeckillProductServiceImpl seckillProductService;
+    @Autowired
+    public void setSeckillProductService(SeckillProductServiceImpl seckillProductService) {
+        this.seckillProductService = seckillProductService;
     }
 
     UserServiceImpl userService;
@@ -171,9 +178,10 @@ public class UserController {
         return ResponseResult.success("测试成功");
     }
 
-    @GetMapping("/interval")
+    @GetMapping("/admin-index")
     public Object getIntervalData(Model model){
-        model.addAttribute("data", userService.getUserInterval());
-        return "test";
+        model.addAttribute("userAge", userService.getUserInterval());
+        model.addAttribute("productList",seckillProductService.getAllSecKillProducts().getResult());
+        return "admin-index";
     }
 }
