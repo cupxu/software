@@ -50,6 +50,7 @@ public class GlobalCorsConfig implements WebMvcConfigurer{
                 registry.addInterceptor(jwtInterceptor)
                         .addPathPatterns("/**")
                         .excludePathPatterns("/user/**")
+                        .excludePathPatterns("/actuator/**")
                         .excludePathPatterns("/admin/**")
                         .excludePathPatterns("/seckillProduct/getSecKillProducts")
                         .excludePathPatterns("/product/add")

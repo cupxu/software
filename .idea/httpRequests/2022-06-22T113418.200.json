@@ -1,0 +1,6 @@
+{
+  "code": "-1",
+  "msg": "Invalid bound statement (not found): com.ff.sxbank.mapper.UserMapper.getUserInterval",
+  "result": null,
+  "date": "2022-06-22 11:34:18 AM"
+}

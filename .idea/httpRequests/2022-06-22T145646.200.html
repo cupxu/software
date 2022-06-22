@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+</head>
+
+<body>
+<!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+<div id="main" style="width: 600px;height:400px;"></div>
+<ul>
+    <li>user1</li>
+    <li>user2</li>
+    <li>user3</li>
+    <li>user4</li>
+    <li>user5</li>
+    <li>user6</li>
+    <li>user7</li>
+</ul>
+<div>
+    <h2>[User(userId=1, username=user1, password=123, phoneNumber=15389762847, identityNumber=123456, registerTime=null,
+        lastLoginTime=null, version=1, deleted=0, money=10000, product=null, accountNumber=463785986389765934,
+        success=0, age=18, productName=null), User(userId=2, username=user2, password=hbMK6/IeJ3UTzaTgLb3f3A==,
+        phoneNumber=null, identityNumber=1234567890123, registerTime=Wed Apr 13 11:06:04 CST 2022, lastLoginTime=Wed Apr
+        13 11:06:04 CST 2022, version=1, deleted=0, money=5934, product=null, accountNumber=null, success=0, age=35,
+        productName=null), User(userId=3, username=user3, password=12345, phoneNumber=null, identityNumber=,
+        registerTime=null, lastLoginTime=null, version=1, deleted=0, money=10000, product=null, accountNumber=null,
+        success=0, age=45, productName=null), User(userId=4, username=user4, password=123456, phoneNumber=null,
+        identityNumber=, registerTime=null, lastLoginTime=null, version=1, deleted=0, money=10000, product=null,
+        accountNumber=null, success=0, age=null, productName=null), User(userId=5, username=user5, password=null,
+        phoneNumber=null, identityNumber=, registerTime=null, lastLoginTime=null, version=1, deleted=0, money=10000,
+        product=null, accountNumber=null, success=0, age=38, productName=null), User(userId=6, username=user6,
+        password=null, phoneNumber=null, identityNumber=, registerTime=null, lastLoginTime=null, version=1, deleted=0,
+        money=10000, product=null, accountNumber=null, success=0, age=63, productName=null), User(userId=7,
+        username=user7, password=null, phoneNumber=null, identityNumber=, registerTime=null, lastLoginTime=null,
+        version=1, deleted=0, money=10000, product=null, accountNumber=null, success=0, age=54, productName=null)]</h2>
+    <p>
+        datas[0]
+    </p>
+</div>
+<script>
+    //从后端获取json字符串
+    var obj = [User(userId = 1, username = user1, password = 123, phoneNumber = 15389762847, identityNumber = 123456, registerTime = null, lastLoginTime = null, version = 1, deleted = 0, money = 10000, product = null, accountNumber = 463785986389765934, success = 0, age = 18, productName = null), User(userId = 2, username = user2, password = hbMK6 / IeJ3UTzaTgLb3f3A ==, phoneNumber = null, identityNumber = 1234567890123, registerTime = Wed Apr 13 11
+    :
+    06
+    :
+    04
+    CST
+    2022, lastLoginTime = Wed
+    Apr
+    13
+    11
+    :
+    06
+    :
+    04
+    CST
+    2022, version = 1, deleted = 0, money = 5934, product = null, accountNumber = null, success = 0, age = 35, productName = null
+    ),
+    User(userId = 3, username = user3, password = 12345, phoneNumber = null, identityNumber =, registerTime = null, lastLoginTime = null, version = 1, deleted = 0, money = 10000, product = null, accountNumber = null, success = 0, age = 45, productName = null), User(userId = 4, username = user4, password = 123456, phoneNumber = null, identityNumber =, registerTime = null, lastLoginTime = null, version = 1, deleted = 0, money = 10000, product = null, accountNumber = null, success = 0, age = null, productName = null), User(userId = 5, username = user5, password = null, phoneNumber = null, identityNumber =, registerTime = null, lastLoginTime = null, version = 1, deleted = 0, money = 10000, product = null, accountNumber = null, success = 0, age = 38, productName = null), User(userId = 6, username = user6, password = null, phoneNumber = null, identityNumber =, registerTime = null, lastLoginTime = null, version = 1, deleted = 0, money = 10000, product = null, accountNumber = null, success = 0, age = 63, productName = null), User(userId = 7, username = user7, password = null, phoneNumber = null, identityNumber =, registerTime = null, lastLoginTime = null, version = 1, deleted = 0, money = 10000, product = null, accountNumber = null, success = 0, age = 54, productName = null)
+    ]
+    //将json字符串转为数组
+    var datas = JSON.parse(obj);
+</script>
+</body>
+
+</html>

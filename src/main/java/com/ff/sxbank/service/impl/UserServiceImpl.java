@@ -13,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -184,6 +185,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         return ResponseResult.success(userMapper.deleteById(id));
     }
 
+    // 获取年龄分组数据
+    @Override
+    public List<Object> getUserInterval() {
+        List<Object> obj = userMapper.getUserInterval();
+        log.info("分组数据:{}", obj);
+        return obj;
+    }
+
     @Override
     public ResponseResult selectByName(String name) {
         QueryWrapper wrapper = new QueryWrapper();
@@ -196,5 +205,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             return ResponseResult.error("按姓名查询出错");
         }
     }
+
 
 }

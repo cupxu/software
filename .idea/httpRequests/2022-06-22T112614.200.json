@@ -1,0 +1,6 @@
+{
+  "code": "-1",
+  "msg": "Error attempting to get column 'AgeGroup' from result set.  Cause: java.sql.SQLDataException: Cannot determine value type from string '18-30'\n; Cannot determine value type from string '18-30'; nested exception is java.sql.SQLDataException: Cannot determine value type from string '18-30'",
+  "result": null,
+  "date": "2022-06-22 11:26:14 AM"
+}

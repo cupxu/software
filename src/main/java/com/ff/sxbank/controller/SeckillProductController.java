@@ -9,6 +9,8 @@ import com.ff.sxbank.util.LinkUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,7 +25,7 @@ import java.util.concurrent.CompletableFuture;
  * @since 2022-03-01
  */
 @Slf4j
-@RestController
+@Controller
 @RequestMapping("/seckillProduct")
 public class SeckillProductController {
 
@@ -82,8 +84,9 @@ public class SeckillProductController {
      * @Date: 3/9/2022
      */
     @GetMapping("/getSecKillProducts")
-    public ResponseResult getAllSecKillProducts() {
-        return seckillProductService.getAllSecKillProducts();
+    public String getAllSecKillProducts(Model model) {
+        model.addAttribute("allProducts",seckillProductService.getAllSecKillProducts());
+        return "all-products";
     }
 
     @PostMapping("/update")

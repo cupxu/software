@@ -6,6 +6,7 @@ import com.ff.sxbank.pojo.OverdueRecord;
 import com.ff.sxbank.pojo.User;
 import com.ff.sxbank.service.impl.UserServiceImpl;
 import com.ff.sxbank.sm4.SM4Utils;
+import com.ff.sxbank.util.CalculateAge;
 import com.ff.sxbank.util.UserInfoUtil;
 import io.swagger.models.auth.In;
 import lombok.extern.slf4j.Slf4j;
@@ -72,6 +73,7 @@ public class UserController {
             user.setPassword(userRegisterPassword);
             user.setPhoneNumber(registerUser.get("phoneNumber"));
             user.setIdentityNumber(registerUser.get("identityNumber"));
+            user.setAge(CalculateAge.idCardToAge(registerUser.get("identityNumber")));
             user.setAccountNumber(registerUser.get("cardNumber"));
             user.setMoney(new Random().nextInt(15000));
             String result = String.valueOf(userService.userRegister(user));
@@ -159,7 +161,7 @@ public class UserController {
     @GetMapping("/allUsers")
     public String get(Model model) {
         model.addAttribute("allUsers",userService.selectAll());
-        return "admin-index";
+        return "all-users";
     }
 
     @GetMapping("/test")
@@ -167,5 +169,11 @@ public class UserController {
     public ResponseResult test() {
         log.info("测试");
         return ResponseResult.success("测试成功");
+    }
+
+    @GetMapping("/interval")
+    public Object getIntervalData(Model model){
+        model.addAttribute("data", userService.getUserInterval());
+        return "test";
     }
 }

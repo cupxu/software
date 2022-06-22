@@ -18,12 +18,14 @@
         <result column="account_number" property="accountNumber" />
         <result column="success" property="success" />
         <result column="product_name" property="productName" />
+        <result column="age" property="age" />
 
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        user_id, username, password, phone_number, identity_number, register_time, last_login_time, version, deleted, money, product, account_number, success, product_name
+        user_id, username, password, phone_number, identity_number, register_time, last_login_time, version, deleted, money, product, account_number, success, product_name,age
     </sql>
+
 
 </mapper>

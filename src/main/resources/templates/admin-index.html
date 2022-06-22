@@ -4,14 +4,28 @@
 <head>
     <meta charset="utf-8">
     <title>Title</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
 </head>
 
 <body>
+<!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+<div id="main" style="width: 600px;height:400px;"></div>
 <ul>
     <li th:each="tag:${allUsers.getResult()}"
         th:text="${tag.username}"></li>
 </ul>
-
+<div>
+    <h2 th:text="${allUsers.getResult()}"></h2>
+    <p>
+        datas[0]
+    </p>
+</div>
+<script>
+    //从后端获取json字符串
+    var  obj=[[${allUsers.getResult()}]]
+    //将json字符串转为数组
+    var datas = JSON.parse(obj);
+</script>
 </body>
 
 </html>

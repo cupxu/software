@@ -6,6 +6,8 @@ import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * <p>
  *  Mapper 接口
@@ -25,5 +27,18 @@ public interface UserMapper extends BaseMapper<User> {
 
     @Select("select count(user.username) from user")
     int selectAll();
+
+    @Select("Select count(*),a.AgeGroup Count from (\n" +
+            "select \n" +
+            "Case \n" +
+            "     when age between 18 and 30 then 'age1'\n" +
+            "\t\t when age between 31 and 40 then 'age2'\n" +
+            "\t\t when age between 41 and 50 then 'age3'\n" +
+            "\t\t when age between 51 and 60 then 'age4'\n" +
+            "     when  age > 60 then 'age5' end AgeGroup \n" +
+            "from user ) a\n" +
+            "group by a.AgeGroup\n" +
+            "LIMIT 1,7")
+    List<Object> getUserInterval();
 
 }

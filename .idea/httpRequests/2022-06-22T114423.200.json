@@ -1,0 +1,6 @@
+{
+  "code": "-1",
+  "msg": "\r\n### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,7' at line 10\r\n### The error may exist in com/ff/sxbank/mapper/UserMapper.java (best guess)\r\n### The error may involve defaultParameterMap\r\n### The error occurred while setting parameters\r\n### SQL: Select a.AgeGroup, count(*) Count from (         select         Case         when Age between 18 and 30 then '18-30'         when Age between 31 and 40 then '31-40'         when Age between 41 and 50 then '41-50'         when Age between 51 and 60 then '51-60'         when  Age > 60 then '>60' end AgeGroup         from user ) a         group by a.AgeGroupLIMIT 1,7\r\n### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,7' at line 10\n; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,7' at line 10",
+  "result": null,
+  "date": "2022-06-22 11:44:23 AM"
+}

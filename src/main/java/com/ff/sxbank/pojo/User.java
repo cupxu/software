@@ -85,6 +85,8 @@ public class User implements Serializable {
 
     private Integer success;
 
+    private Integer age;
+
     private String productName;
 
 

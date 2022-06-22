@@ -1,5 +1,57 @@
 GET http://localhost:8080/user/allUsers
 
+<> 2022-06-22T145646.200.html
+
+###
+
+GET http://localhost:8080/user/interval
+
+<> 2022-06-22T143614.500.json
+
+###
+
+GET http://localhost:8080/user/interval
+
+###
+
+GET http://localhost:8080/user/interval
+
+<> 2022-06-22T114549.500.json
+
+###
+
+GET http://localhost:8080/user/interval
+
+<> 2022-06-22T114423.200.json
+
+###
+
+GET http://localhost:8080/user/interval
+
+<> 2022-06-22T113925.200.json
+
+###
+
+GET http://localhost:8080/user/interval
+
+<> 2022-06-22T113754.200.json
+
+###
+
+GET http://localhost:8080/user/interval
+
+<> 2022-06-22T113418.200.json
+
+###
+
+GET http://localhost:8080/user/interval
+
+<> 2022-06-22T112614.200.json
+
+###
+
+GET http://localhost:8080/user/allUsers
+
 <> 2022-06-21T103838.200.html
 
 ###

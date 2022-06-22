@@ -31,4 +31,6 @@ public interface IUserService extends IService<User> {
 
 
     ResponseResult deleteById(int id);
+
+    Object getUserInterval();
 }

@@ -1,0 +1,6 @@
+{
+  "code": "-1",
+  "msg": "nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 6",
+  "result": null,
+  "date": "2022-06-22 11:37:54 AM"
+}
