@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>第一个 ECharts 实例</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">公司产品与用户概况</h3>
+                            </div>
+
+                            <div class="panel-body">
+                                
+                            <!--目标收益环图-->
+                            <div class="col-md-4" id="priceView" style="width: 400px;height:300px;">
+                                <script type="text/javascript" th:inline="javascript">
+
+                                    var companyTarget = 100000;
+                                    var companyMoney = [[${companyMoney}]];
+                                    var companyGap = companyTarget-companyMoney;
+                            
+                                    var myChart = echarts.init(document.getElementById('priceView'));
+                            
+                                    // 显示标题，图例和空的坐标轴
+                                    myChart.setOption({
+                                        title: {
+                                            text: '目标收益',
+                                            left: 'center',
+                                            top: 'center'
+                                        },
+                                        tooltip: {},
+                                        series: [
+                                        {
+                                            color: [
+                                                new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                                    { offset: 0, color: 'rgba(255, 165, 0, 0.5)' },
+                                                    { offset: 1, color: 'rgba(205, 0, 0, 0.8)' }
+                                                ]),
+                                                new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                                    { offset: 0, color: 'rgba(255, 140, 105, 0.3)' },
+                                                    { offset: 1, color: 'rgba(255, 215, 0, 0.1)' }
+                                                ])
+                                            ],
+                                            type: 'pie',
+                                            data: [
+                                            {
+                                                value: companyMoney,
+                                                name: '已获得收益'
+                                                
+                                            },
+                                            {
+                                                value: companyGap,
+                                                name: '差距'
+                                            }
+                                            ],
+                                            radius: ['40%', '70%'],
+                                        }
+                                        ]
+                                    });
+                            
+                                </script>
+
+                            </div>   
+                            <!--产品金额散点图-->
+                            <div class="col-md-4" id="productPrice" style="width: 400px;height:300px;">
+                                    <script type="text/javascript" th:inline="javascript">
+
+                                        //从后端获取json字符串
+                                        var allproducts = [[${productList}]]
+                                        var product = []
+                                        var price = []
+
+                                        //在js读取thymeleaf变量值
+                                        for(var i = 0 ; i < allproducts.length ; i++)
+                                        {
+                                            product[i] = allproducts[i].seckillProductName;
+                                            price[i] = allproducts[i].seckillProductPrice;
+                                        }
+
+                                        var myChart = echarts.init(document.getElementById('productPrice'));
+
+                                        // 显示标题，图例和空的坐标轴
+                                        myChart.setOption({
+                                            title: {
+                                                text: '产品金额分布图'
+                                            },
+                                            tooltip: {},
+                                            legend: {
+                                                data: ['金额']
+                                            },
+                                            xAxis: {
+                                                data: product
+                                            },
+                                            yAxis: {},
+                                            series: [
+                                                {
+                                                    name: '金额',
+                                                    type: 'scatter',
+                                                    data: price
+                                                }
+                                            ]
+                                        });
+
+
+                                    </script>
+
+                            </div>
+                            <!--用户年龄饼图-->
+                            <div class="col-md-4" id="userAge" style="width: 400px;height:300px;">
+                                <script type="text/javascript" th:inline="javascript">
+                                    //在js读取thymeleaf变量值
+                                    var obj=[[${userAge}]]
+                                    var age1 = obj[0];
+                                    var age2 = obj[1];
+                                    var age3 = obj[2];
+                                    var age4 = obj[3];
+                                    var age5 = obj[4];
+                                    var myChart = echarts.init(document.getElementById('userAge'));
+
+                                            // 显示标题，图例和空的坐标轴
+                                            myChart.setOption({
+                                                tooltip: {},
+                                                title: {
+                                                    text: '年龄分布',
+                                                    left: 'center'
+                                                },
+                                                series: [
+                                                {
+                                                    name: '年龄',
+                                                    type: 'pie',
+                                                    data: [
+                                                    {value: age1,name: '18-30岁'},
+                                                    {value: age2,name: '31-40岁'},
+                                                    {value: age3,name: '41-50岁'},
+                                                    {value: age4,name: '51-60岁'},
+                                                    {value: age5,name: '61-70岁'}
+                                                    ]
+                                                }
+                                                ]
+                                            });
+                                </script>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">用户总览</h3>
+                            </div>
+
+                            <div class="panel-body">
+                                <!--<div id="demo-line-chart" class="ct-chart"></div>-->
+                                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+
+                            <!--目标用户数量环图-->
+                            <div class="col-md-4" id="userView" style="width: 400px;height:300px;" style="text-align:center">
+                                <script type="text/javascript" th:inline="javascript">
+
+                                    var userTarget = 10000;
+                                    var allUsers= [[${userList}]]
+                                        var userNum = allUsers.length;
+                                        var userGap = userTarget-userNum;
+                            
+                                    var myChart = echarts.init(document.getElementById('userView'));
+                            
+                                    // 显示标题，图例和空的坐标轴
+                                    myChart.setOption({
+                                        title: {
+                                            text: '目标用户数量',
+                                            left: 'center',
+                                            top: 'center'
+                                        },
+                                        tooltip: {},
+                                        series: [
+                                        {
+                                            color: [
+                                                new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                                    { offset: 0, color: 'rgba(255, 192, 203, 0.5)' },
+                                                    { offset: 1, color: 'rgba(199, 21, 133, 0.8)' }
+                                                ]),
+                                                new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                                    { offset: 0, color: 'rgba(0, 178, 238, 0.1)' },
+                                                    { offset: 1, color: 'rgba(216, 191, 216, 0.5)' }
+                                                ])
+                                            ],
+                                            type: 'pie',
+                                            data: [
+                                            {
+                                                value: userNum,
+                                                name: '已注册用户'
+                                                
+                                            },
+                                            {
+                                                value: userGap,
+                                                name: '差距'
+                                            }
+                                            ],
+                                            radius: ['40%', '70%'],
+                                        }
+                                        ]
+                                    });
+                            
+                                </script>
+
+                            </div>    
+
+                            <!--用户表-->
+                            <div class="col-md-8" id="userTable" style="width: 600px;height:300px;" style="text-align:center">
+                             
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">产品总览</h3>
+                            </div>
+
+                            <div class="panel-body">
+                                <!--<div id="demo-line-chart" class="ct-chart"></div>-->
+                                <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+
+                            <!--目标产品数量环图-->
+                            <div class="col-md-4" id="productView" style="width: 400px;height:300px;" style="text-align:center">
+                                <script type="text/javascript" th:inline="javascript">
+
+                                    var productTarget = 10;
+                                    //从后端获取json字符串
+                                    var allproducts = [[${productList}]]
+                                        var productNum = allproducts.length;
+                                        var productGap = productTarget - productNum;
+                            
+                                    var myChart = echarts.init(document.getElementById('productView'));
+                            
+                                    // 显示标题，图例和空的坐标轴
+                                    myChart.setOption({
+                                        title: {
+                                            text: '目标产品数量',
+                                            left: 'center',
+                                            top: 'center'
+                                        },
+                                        tooltip: {},
+                                        series: [
+                                        {
+                                            color: [
+                                                new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                                    { offset: 0, color: 'rgba(255, 192, 203, 0.5)' },
+                                                    { offset: 1, color: 'rgba(199, 21, 133, 0.8)' }
+                                                ]),
+                                                new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                                    { offset: 0, color: 'rgba(0, 178, 238, 0.1)' },
+                                                    { offset: 1, color: 'rgba(216, 191, 216, 0.5)' }
+                                                ])
+                                            ],
+                                            type: 'pie',
+                                            data: [
+                                            {
+                                                value: productNum,
+                                                name: '已发行产品'
+                                                
+                                            },
+                                            {
+                                                value: productGap,
+                                                name: '差距'
+                                            }
+                                            ],
+                                            radius: ['40%', '70%'],
+                                        }
+                                        ]
+                                    });
+                            
+                                </script>
+
+                            </div>    
+
+                            <!--产品表-->
+                            <div class="col-md-8" id="productTable" style="width: 600px;height:300px;" style="text-align:center">
+                            
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+        <!-- END MAIN CONTENT -->
+    </div>
+
+
+</body>
+</html>

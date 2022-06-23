@@ -6,17 +6,13 @@ import com.ff.sxbank.pojo.OverdueRecord;
 import com.ff.sxbank.pojo.User;
 import com.ff.sxbank.service.impl.SeckillProductServiceImpl;
 import com.ff.sxbank.service.impl.UserServiceImpl;
-import com.ff.sxbank.sm4.SM4Utils;
 import com.ff.sxbank.util.CalculateAge;
-import com.ff.sxbank.util.UserInfoUtil;
-import io.swagger.models.auth.In;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -70,36 +66,21 @@ public class UserController {
     }
 
     @PostMapping("/register")
+    @ResponseBody
     public ResponseResult register(@RequestBody Map<String,String> registerUser) {
         try {
             System.out.println(registerUser);
-            String username = registerUser.get("username");
-            user.setUsername(username);
-            String userRegisterPassword = registerUser.get("password");
-            // 对用户密码加密后进行存储
-            user.setPassword(userRegisterPassword);
+            user.setUsername(registerUser.get("username"));
+            user.setPassword(registerUser.get("password"));
             user.setPhoneNumber(registerUser.get("phoneNumber"));
             user.setIdentityNumber(registerUser.get("identityNumber"));
             user.setAge(CalculateAge.idCardToAge(registerUser.get("identityNumber")));
             user.setAccountNumber(registerUser.get("cardNumber"));
+            // 随机生成0 - 15000之间的金额
             user.setMoney(new Random().nextInt(15000));
             String result = String.valueOf(userService.userRegister(user));
             log.info("用户信息：{}",user);
-
-            // 除了注册信息外还要添加用户对应的默认sift信息
-            List<Integer> list = UserInfoUtil.generateInfo();
-            log.info("overdueRecord信息：{}",list);
-            overdueRecord.setIdentityNumber(registerUser.get("identityNumber"));
-            overdueRecord.setUsername(registerUser.get("username"));
-            overdueRecord.setIsBorrow(list.get(0));
-            overdueRecord.setIsStore(list.get(1));
-            overdueRecord.setWorkingState(list.get(2));
-            overdueRecord.setOverdueDays(list.get(3));
-            overdueRecord.setOverdueTimes(list.get(4));
-            overdueRecordMapper.insert(overdueRecord);
-
-            log.info(String.valueOf(overdueRecord));
-            return ResponseResult.success(result,"注册成功");
+            return ResponseResult.success(result,"注册结果");
         } catch (Exception e) {
             log.info(e.getMessage());
             return ResponseResult.error(e.getMessage());
@@ -107,6 +88,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
+    @ResponseBody
     public ResponseResult login(@RequestBody Map<String, String> loginUser) {
 
         try {
@@ -168,7 +150,7 @@ public class UserController {
     @GetMapping("/allUsers")
     public String get(Model model) {
         model.addAttribute("allUsers",userService.selectAll());
-        return "all-users";
+        return "admin_users";
     }
 
     @GetMapping("/test")
@@ -182,6 +164,6 @@ public class UserController {
     public Object getIntervalData(Model model){
         model.addAttribute("userAge", userService.getUserInterval());
         model.addAttribute("productList",seckillProductService.getAllSecKillProducts().getResult());
-        return "admin-index";
+        return "admin_index_back";
     }
 }

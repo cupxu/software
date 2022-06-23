@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ch" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>产品信息</title>
+</head>
+<body>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>产品名</th>
+            <th>价格</th>
+            <th>剩余</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- 遍历集合，如果被遍历的变量 userList 为 null 或者不存在，则不会进行遍历，也不报错-->
+        <!-- 需要：一个List products，单个List元素为一个Product对象，Product有名称等属性-->
+        <tr th:each="product:${allUsers.getResult()}">
+            <!-- 产品名称-->
+            <td th:text="${product.seckillProductName}">产品名</td>
+            <!-- 产品价格-->
+            <td th:text="${product.seckillProductPrice}">产品价格</td>
+            <!-- 产品数量-->
+            <td th:text="${product.seckillProductAmount}">产品数量</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

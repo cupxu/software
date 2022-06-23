@@ -332,5 +332,13 @@ public class SeckillProductServiceImpl extends ServiceImpl<SeckillProductMapper,
         }
     }
 
+    /**
+     * 退货
+     */
+    public String goodsReturn(Map<String,String> info){
+        String userIdentity = info.get("identityNumber");
+        String seckillProductName = info.get("seckillProductName");
+        return null;
+    }
 
 }

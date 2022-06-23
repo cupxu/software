@@ -4,9 +4,13 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.ff.sxbank.exception.ResponseResult;
 import com.ff.sxbank.pojo.Admin;
 import com.ff.sxbank.service.impl.AdminServiceImpl;
+import com.ff.sxbank.service.impl.SeckillProductServiceImpl;
+import com.ff.sxbank.service.impl.UserServiceImpl;
 import com.ff.sxbank.sm4.SM4Utils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -19,7 +23,7 @@ import java.util.Map;
  * @create: 2022-03-16 17:32
  **/
 @Slf4j
-@RestController
+@Controller
 @RequestMapping("/admin")
 public class AdminController {
 
@@ -34,6 +38,19 @@ public class AdminController {
     public void setAdminService(AdminServiceImpl adminService) {
         this.adminService = adminService;
     }
+
+    public SeckillProductServiceImpl seckillProductService;
+    @Autowired
+    public void setSeckillProductService(SeckillProductServiceImpl seckillProductService) {
+        this.seckillProductService = seckillProductService;
+    }
+
+    UserServiceImpl userService;
+    @Autowired
+    public void setUserService(UserServiceImpl userService) {
+        this.userService = userService;
+    }
+
 
     @GetMapping("/check/{username}")
     public String checkRepeat(@RequestParam("username") String username) {
@@ -78,5 +95,43 @@ public class AdminController {
     public ResponseResult info() {
         return adminService.getInfo();
     }
+
+    /**
+     * 用户登录后主页
+     * @param model
+     * @return
+     */
+    @GetMapping("/index")
+    public Object getIntervalData(Model model){
+        // 用户年龄分组数据
+        model.addAttribute("userAge", userService.getUserInterval());
+        log.info("userAge,{}",userService.getUserInterval());
+        // 公司账户金额
+        model.addAttribute("companyMoney", adminService.getAdmin().getCompanyMoney());
+        log.info("companyMoney,{}",adminService.getAdmin().getCompanyMoney());
+
+        // 产品列表
+        model.addAttribute("productList",seckillProductService.getAllSecKillProducts().getResult());
+        log.info("productList,{}",seckillProductService.getAllSecKillProducts().getResult());
+
+        // 用户列表
+        model.addAttribute("userList",userService.selectAll().getResult());
+        log.info("userList,{}",userService.selectAll().getResult());
+
+        return "admin_index_back";
+    }
+
+    /**
+     * 管理员查看所有用户
+     * @param model
+     * @return
+     */
+    @GetMapping("/all_users")
+    public String get(Model model) {
+        model.addAttribute("allUsers",userService.selectAll());
+        return "admin_users";
+    }
+
+
 
 }

@@ -60,7 +60,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             result = userMapper.insert(user);
             return result;
         } catch (Exception e) {
-            System.out.println(e.getStackTrace());
+            e.printStackTrace();
             return result;
         }
     }
@@ -76,8 +76,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             User userDB = userMapper.selectOne(wrapper);
             log.info("user from db :{}",userDB);
             if (userDB == null) {
-                log.info("user from db :{}","查无此人 请先注册");
-                return ResponseResult.error("没有找到这个人");
+                log.info("user from db :{}","用户名或密码不正确");
+                return ResponseResult.error("用户名或密码不正确");
             } else {
                 //生成token
                 try {
@@ -189,7 +189,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Override
     public List<Object> getUserInterval() {
         List<Object> obj = userMapper.getUserInterval();
-        log.info("分组数据:{}", obj);
         return obj;
     }
 

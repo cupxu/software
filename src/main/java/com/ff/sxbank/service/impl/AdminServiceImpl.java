@@ -91,11 +91,21 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
         }
     }
 
+    @Override
     public ResponseResult getInfo() {
         QueryWrapper wrapper3 = new QueryWrapper();
         wrapper3.eq("admin_name", "admin");
         return ResponseResult.success(adminMapper.selectOne(wrapper3));
     }
+
+
+    public Admin getAdmin() {
+        QueryWrapper wrapper3 = new QueryWrapper();
+        wrapper3.eq("admin_name", "admin");
+        return adminMapper.selectOne(wrapper3);
+    }
+
+
 
 
 }

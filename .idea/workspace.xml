@@ -40,7 +40,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="25ij08q1gIT2qcmoxEj9ofRijHo" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -76,11 +78,11 @@
       <recent name="A:\sxbank\src\main\java\com\ff\sxbank" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CollegeAffairs\software\src\main\resources\templates" />
       <recent name="A:\sxbank\src\main\resources" />
       <recent name="A:\sxbank\src\test\java\com\ff\sxbank" />
       <recent name="A:\sxbank\src\main\java\com\ff\sxbank\service\impl" />
       <recent name="A:\sxbank\src\main\java\com\ff\sxbank\service" />
-      <recent name="A:\sxbank\src\main\java\com\ff\sxbank\controller" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.ff.sxbank" />
@@ -119,9 +121,9 @@
       <item itemvalue="HTTP Request.generated-requests | #51" />
       <item itemvalue="HTTP Request.SxbankApplication | #1" />
       <item itemvalue="HTTP Request.generated-requests | #53" />
-      <item itemvalue="Spring Boot.SxbankApplication" />
       <item itemvalue="HTTP Request.generated-requests | #54" />
       <item itemvalue="HTTP Request.generated-requests | #55" />
+      <item itemvalue="Spring Boot.SxbankApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -139,7 +141,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="99f5bfa8-2051-43d6-b80e-a5462f07a9d8" name="Changes" comment="" />
+      <changelist id="9bbf4f3c-7f90-462f-b83b-23d6172a9a3a" name="Changes" comment="" />
       <created>1646016575257</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -245,7 +247,9 @@
       <workItem from="1655778889284" duration="2132000" />
       <workItem from="1655794121013" duration="4443000" />
       <workItem from="1655860266071" duration="8069000" />
-      <workItem from="1655879054470" duration="5297000" />
+      <workItem from="1655879054470" duration="9514000" />
+      <workItem from="1655889210799" duration="265000" />
+      <workItem from="1655945246837" duration="4298000" />
     </task>
     <task id="LOCAL-00001" summary="取消用户登录密码加密">
       <created>1655711556220</created>
@@ -282,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655881989115</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Echarts Integration 完成">
+      <created>1655884757040</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655884757040</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +314,8 @@
     <MESSAGE value="取消用户登录密码加密" />
     <MESSAGE value="测试前后端交互 查询所有用户姓名&#10;接口 ip:8080/user/allUsers" />
     <MESSAGE value="完成所有用户、产品查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成所有用户、产品查询" />
+    <MESSAGE value="Echarts Integration 完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="Echarts Integration 完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

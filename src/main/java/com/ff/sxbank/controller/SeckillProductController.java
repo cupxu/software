@@ -86,7 +86,7 @@ public class SeckillProductController {
     @GetMapping("/getSecKillProducts")
     public String getAllSecKillProducts(Model model) {
         model.addAttribute("allProducts",seckillProductService.getAllSecKillProducts());
-        return "all-products";
+        return "admin_products";
     }
 
     @PostMapping("/update")
